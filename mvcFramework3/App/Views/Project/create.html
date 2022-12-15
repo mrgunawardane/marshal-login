@@ -1,0 +1,161 @@
+<!-- <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+</head>
+
+<body>
+    <h1>Create Project</h1>
+
+    <form action="http://localhost/mvcFramework3/public/projects/register" method="post">
+        <label for="projectName">Project Name : </label>
+        <input type="text" name="projectName" id="projectName" placeholder="Enter project name">
+        <br>
+
+        <label for="description">Description : </label>
+        <input type="text" name="description" id="description" placeholder="Enter description">
+        <br>
+
+        <label for="field">Field : </label>
+        <input type="text" name="field" id="field" placeholder="Enter field">
+        <br>
+
+        <button type="submit">Create</button>
+    </form>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Create</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f5f5f5;
+    justify-content: center;
+    display: flex;
+}
+.container{
+    margin-top: 50px;
+    height: 550px;
+    width: 850px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 20px;
+}
+.container .top{
+    display: flex;
+    justify-content: space-between;
+}
+.top i{
+    margin: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container h1{
+    margin: 30px 10px 0px 80px;
+    color: #283A5A;
+}
+.container p{
+    color: #000;
+    font-size: small;
+    margin-left: 80PX;
+}
+.container form{
+    /* border: 1px solid black; */
+    width: 350px;
+    margin: 25px 0 0 80px;
+}
+
+.container form label{
+    color: #283A5A;
+    font-size: small;
+    font-weight: 650;
+}
+
+.container form input{
+    margin-top: 2px;
+    width: 300px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    padding-left: 10px;
+}
+#idea{
+    font-size: 9px;
+    margin-left: 0;
+    margin-top: 2px;
+    color: #555;
+}
+#field{
+    margin-bottom: 15px;
+}
+#description{
+    height: 120px;
+}
+
+form button{
+    background-color: #F83B3B;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    width: 130px;
+    height: 35px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 550;
+    font-size: large;
+    cursor: pointer;
+}
+    </style>
+
+    <div class="container">
+        <div class="top">
+            <div class="left"></div>
+            <i class="fa fa-times" aria-hidden="true"></i>
+
+        </div>
+        <h1>Let's create new project</h1>
+        <p>Make it simpler for everyone to access boards in one place to increase productivity.</p>
+
+        <form action="http://localhost/mvcFramework3/public/projects/register" method="post">
+            <label for="projectName">Project Name</label>
+            <br>
+            <input type="text" name="projectName" id="projectName" placeholder="Enter project name">
+            <br>
+            <p id="idea">Your business, group or organization's name is here.</p>
+            <br>
+            
+            <label for="field">Project Type : </label>
+            <br>
+            <input type="text" name="field" id="field" placeholder="Enter field">
+            <br>
+            <label for="description">Description </label>
+            <br>
+            <input type="text" name="description" id="description" placeholder="Enter description">
+            <br>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+</body>
+</html>

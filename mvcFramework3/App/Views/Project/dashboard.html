@@ -1,0 +1,272 @@
+<!-- <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+</head>
+
+<body>
+    <p>This is project dashboard</p>
+    <a class="text login-link" href="http://localhost/mvcFramework3/public/Projects/create">Create Project</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marshal-Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    width: 1332px;
+    height: 75px;
+    /* border: 1px solid black; */
+    border: none;
+    outline: none;
+    margin: 8px;
+    border-radius: 15px;
+    background-color: #F83B3B;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    /* position: fixed; */
+}
+
+.navbar img{
+    width: 75px;
+    cursor: pointer;
+}
+#logo{
+    margin-left: 20px;
+}
+.user-dp{
+    display: flex;
+    margin-right: 30px;
+}
+#dp{
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 65px;
+}
+.user-dp i{
+    color: #fff;
+    /* width: 40px; */
+    font-size: 25px;
+    margin: 25px 10px;
+}
+.user-dp p{
+    color: #444;
+    background-color: #fff;
+    width: 200px;
+    height: 25px;
+    margin: 25px 0;
+    padding-left: 20px;
+    padding-top: 2px;
+    font-size: small;
+    font-style: italic;
+    border-radius: 30px;
+}
+.dashboard-body{
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.sidebar{
+    width: 350px;
+    height: 560px;
+    /* margin-top: 92px; */
+    margin-left: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border-radius: 20px;
+}
+.sidebar ul{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: 20px 10%;
+}
+.sidebar ul li{
+    list-style: none;
+    background-color: #f7f7f7;
+    width: 90%;
+    height: 32px;
+    margin: 10px 5%;
+    padding-left: 20px;
+    padding-top: 4px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.sidebar ul li a{
+    color: #000;
+    text-decoration: none;
+}
+.sidebar ul li:hover{
+    background-color: #d1d1d1;
+}
+.search{
+    width: 420px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    padding-left: 10px;
+    outline: none;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+.projects{
+    /* border: 1px solid black; */
+    width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project{
+    /* border: 1px solid black; */
+    width: 260px;
+    height: 275px;
+    margin: 20px 0 ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.project .field{
+    font-size: small;
+    background-color: #F83B3B;
+    color: #fff;
+    width: 100px;
+    height: 23px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.project .project-name{
+    
+    margin: 5px;
+    margin-top: 15px;
+    color: #444;
+}
+.tasks{
+    color: #444;
+    padding-left: 15px;
+}
+.project ul{
+    list-style: none;
+    margin-top: 5px;
+}
+.project ul li{
+    font-size: small;
+    padding-left: 25px;
+}
+.project .team{
+    margin-top: 10px;
+    font-weight: 550;
+    color: #222;
+}
+.bottom{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.bottom a{
+    text-decoration: none;
+    background-color: #20B289;
+    color: #fff;
+    width: 90px;
+    height: 32px;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 2px;
+    border-radius: 8px;
+}
+    </style>
+
+    <div class="navbar">
+        <img id="logo" src="./logo.png" alt="logo">
+        <div class="user-dp">
+            <p>notification</p>
+            <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <a href="#"><img id="dp" src="./dp.png" alt="dp"></a>
+        </div>
+    </div>
+    <div class="dashboard-body">
+        <div class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Profile</li>
+                <li><a href="http://localhost/mvcFramework3/public/Projects/create">Create Project</a></li>
+                <li>Settings</li>
+            </ul>
+        </div>
+        <div class="projects">
+            <!-- <input class="search" type="text" name="search" placeholder="Search ..."> -->
+            
+        </div>
+    </div>
+
+    <script>
+        const projects = document.querySelector('.projects');
+
+function createProject([projectname, field]){
+    let code = `
+    <div class="project">
+        <p class="field">${field}</p>
+        <h3 class="project-name">${projectname}</h3>
+        <p class="tasks">Ongoing Work</p>
+        <ul>
+            <li>Design login UI</li>
+            <li>Develop API</li>
+            <li>Fix #15th bug</li>
+        </ul>
+        <p class="team">Team</p>
+        <div class="bottom">
+            <div class="images"></div>
+            <a href="#">Get info</a>
+        </div>
+    
+    </div>
+    `;
+
+    projects.innerHTML += code;
+}
+let project1 = ['Aura Project', 'IT1'];
+        let project2 = ['Marshal2', 'IT2'];
+
+        // createProject(project1);
+        // createProject(project2);
+
+    	var data = JSON.parse('<?= $data; ?>');
+        console.log(data);
+
+        data.forEach(callCreateProject);
+
+        function callCreateProject(projectdetails){
+            let res = []
+            res.push(projectdetails[1])
+            res.push(projectdetails[3])
+
+            createProject(res);
+        }
+
+        
+    </script>
+</body>
+</html>
