@@ -1,0 +1,138 @@
+<!-- <!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Verify</title>
+
+</head>
+
+<body>
+    <h3>Verify Your Email</h3>
+    <p id="error-message"></p>
+    <form action="http://localhost/mvcFramework3/public/users/verifyEmail" method="post">
+        <label for="verifyCode">
+            Enter Code : 
+        </label>
+        <input type="text" name="verifyCode" id="verifyCode">
+        <input type="text" name="email" id="email" value="" hidden>
+
+        <button type="submit" >Verify</button>
+    </form>
+
+    <script>
+        var data = JSON.parse('<?= $data; ?>');
+        console.log(data);
+
+        const email = document.getElementById("email")
+        const errorMessage = document.getElementById("error-message")
+
+        if(data.email){
+            email.value = data.email
+        }
+        if(data.error){
+            errorMessage.innerHTML = data.error
+        }
+    </script>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    height: 300px;
+    margin-top: 175px;
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: #F83B3B;
+}
+.container h3{
+    text-align: center;
+    margin-top: 40px;
+    font-size: xx-large;
+    color: #fff;
+}
+.container p{
+    font-size: small;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+.container input{
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 30px 0 0 120px;
+    background-color: #ccc;
+    padding-left: 10px;
+}
+.container button{
+    background-color: #474141;
+    border: none;
+    height: 36px;
+    width: 150px;
+    color: #fff;
+    margin: 30px 0 0 170px;
+    border-radius: 10px;
+    font-size: large;
+}
+    </style>
+    <div class="container">
+        <h3>Verify your email</h3>
+        <p>We will send a verification code to your email. Please check.</p>
+
+        <p id="error-message"></p>
+        <form action="http://localhost/mvcFramework3/public/users/verifyEmail" method="post">
+            <label for="verifyCode"></label>
+            <input type="text" placeholder="Enter verify code here" name="verifyCode" id="verifyCode">
+            <input type="text" name="email" id="email" value="" hidden>
+
+            <br>
+            <button type="submit" >Verify</button>
+        </form>
+    </div>
+
+    <script>
+        var data = JSON.parse('<?= $data; ?>');
+        console.log(data);
+
+        const email = document.getElementById("email")
+        const errorMessage = document.getElementById("error-message")
+
+        if(data.email){
+            email.value = data.email
+        }
+        if(data.error){
+            errorMessage.innerHTML = data.error
+        }
+    </script>
+</body>
+</html>
